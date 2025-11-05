@@ -20,11 +20,15 @@ module.exports = (sequelize, DataTypes) => {
         Fasilitas: {
             type: DataTypes.STRING,
             allowNull: false
+        },
+        Tanggal_Pesan: {
+            type: DataTypes.DATE,
+            allowNull: true
         }
     }, {
         tableName: 'hotel',
         freezeTableName: true,
-        timestamps: true
+        timestamps: false
     });
     return Hotel;
 };
